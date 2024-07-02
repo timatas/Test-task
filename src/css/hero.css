@@ -1,0 +1,159 @@
+/* .hero-section {} */
+
+/* ---------------- MIN-MOBILE ------------ */
+
+.hero-container {
+   padding-bottom: 74px;
+}
+
+.hero-titel {
+   color: #010101;
+   text-align: center;
+   font-size: 44px;
+   font-weight: 500;
+   line-height: 1.09;
+   letter-spacing: -0.88px;
+   max-width: 658px;
+   margin: 0 auto;
+}
+
+.hero-titel span {
+   color: var(--color-green);
+}
+
+.hero-titel:not(:last-child) {
+   margin-bottom: 16px;
+}
+
+.hero-text {
+   width: 292px;
+}
+
+.hero-img {
+   max-width: 300px;
+   border-radius: 30px;
+   overflow: hidden;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.hero-icon {
+   position: absolute;
+   top: -7px;
+   right: 24px;
+   width: 100px;
+   height: 100px;
+}
+
+/* ---------------- MOBILE ------------ */
+
+@media only screen and (min-width: 350px) {
+   .hero-img {
+      max-width: 335px;
+      border-radius: 30px;
+      overflow: hidden;
+   }
+
+   .hero-icon {
+      position: absolute;
+      top: -7px;
+      right: 8px;
+      width: 100px;
+      height: 100px;
+   }
+}
+
+/* ---------------- TABLET ------------ */
+
+@media only screen and (min-width: 768px) {
+   .hero-titel {
+      font-size: 80px;
+      line-height: 1;
+      letter-spacing: -1.6px;
+   }
+
+   .hero-titel:not(:last-child) {
+      margin-bottom: 20px;
+   }
+
+   .hero-text {
+      width: 492px;
+   }
+
+   .hero-text:not(:last-child) {
+      margin-bottom: 40px;
+   }
+
+   .hero-img {
+      max-width: 704px;
+      border-radius: 60px;
+   }
+
+   .hero-icon {
+      top: -30px;
+      right: 10px;
+   }
+}
+
+/* ---------------- LAPTOP ------------ */
+
+@media only screen and (min-width: 1050px) {
+   .hero-titel {
+      max-width: 1050px;
+   }
+
+   .hero-text {
+      color: var(--color-text-dark);
+      max-width: 492px;
+      text-align: center;
+      margin: 0 auto;
+   }
+
+   .hero-img {
+      max-width: 1050px;
+      border-radius: 60px;
+   }
+}
+
+/* ---------------- DESKTOP ------------ */
+
+@media only screen and (min-width: 1440px) {
+   .hero-titel {
+      max-width: 1042px;
+   }
+}
+
+.hero-text {
+   color: var(--color-text-dark);
+   max-width: 492px;
+   text-align: center;
+   margin: 0 auto;
+}
+
+.hero-text:not(:last-child) {
+   margin-bottom: 32px;
+}
+
+.hero-body-img {
+   position: relative;
+}
+
+
+@media only screen and (min-width: 1440px) {
+   .hero-img {
+      max-width: 1240px;
+      border-radius: 60px;
+   }
+}
+
+.hero-image {
+   width: 100%;
+   height: auto;
+}
+
+@media only screen and (min-width: 1440px) {
+   .hero-icon {
+      top: -50px;
+      right: 20px;
+   }
+}
