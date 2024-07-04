@@ -1,0 +1,1 @@
+{"version":3,"file":"cart-page-51634d5f.js","sources":["../../src/cart-page.js"],"sourcesContent":["import { handleHeaderScroll } from './js/base-js/scroll';\nimport 'basiclightbox/dist/basicLightbox.min.css'\nhandleHeaderScroll();"],"names":["handleHeaderScroll"],"mappings":"sEAEAA,EAAoB"}
