@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo-favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Favorite</title>
+    <title>Catalog</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
@@ -17,7 +17,14 @@
       <load src="partials/header.html" />
 
       <main>
-        <load src="partials/cart.html" />
+        <load src="partials/filters.html" />
+        <div class="body-wrapper container">
+          <load src="partials/products.html" />
+          <div class="body-aside">
+            <load src="partials/popular.html" />
+            <load src="partials/discount.html" />
+          </div>
+        </div>
       </main>
 
       <load src="partials/footer.html" />
