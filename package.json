@@ -18,7 +18,7 @@
     "@slim-select/vue": "^1.6.0",
     "axios": "^1.6.2",
     "basiclightbox": "^5.0.4",
-    "slim-select": "^2.8.0",
+    "slim-select": "^2.8.2",
     "tui-pagination": "^3.4.1",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"

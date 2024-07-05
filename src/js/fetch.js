@@ -13,7 +13,7 @@ export async function fetchProductsAll(
       keyword: keyword || '',
       category: category || '',
       page: page || 1,
-      limit: limit || 6,
+      limit: limit || 4,
     };
 
     // Додаємо спосіб сортування до параметрів запиту, якщо він існує

@@ -1,7 +1,7 @@
 import { createMarkupCart } from './template.js';
-import addCounter from './cart-header-counter';
+import addCounter from './cart-header-counter.js';
 const title = document.querySelector('.products-quantity-title');
-const totalPrice = document.querySelector('.products-total-price');
+
 const containerCart = document.querySelector('.cart-container');
 const cartWrapper = document.querySelector('.cart-desktop-wrapper');
 const emptyCart = document.querySelector('.cart-empty');
@@ -32,21 +32,14 @@ export function renderCart() {
     cartWrapper.style.display = 'none';
     emptyCart.style.display = 'block';
     containerCart.innerHTML = '';
-    title.textContent = 'Cart (0)';
-    totalPrice.textContent = '$0';
+    title.textContent = 'Favorite (0)';
+    //totalPrice.textContent = '$0';
   } else {
     containerCart.innerHTML = '';
     // cartWrapper.style.display = 'flex';
     emptyCart.style.display = 'none';
 
     containerCart.insertAdjacentHTML('beforeend', createMarkupCart(products));
-    const productsQuantity = document.querySelectorAll('.products-quantity');
-
-    products.forEach((el, index) => {
-      productsQuantity[index].textContent = el.quantity;
-    });
-
-    countTotal(products);
   }
 }
 
@@ -70,8 +63,6 @@ function removeProduct(event) {
   localStorage.setItem(KEY, JSON.stringify(products));
   selectedItem.remove();
   addCounter();
-
-  countTotal(products);
 
   if (products === null || products === undefined || products.length === 0) {
     renderCart();
@@ -112,7 +103,6 @@ function changeQuantity(event) {
     products[index].quantity++;
     productQuantity.innerHTML = products[index].quantity;
     localStorage.setItem(KEY, JSON.stringify(products));
-    countTotal(products);
   }
 
   // тут обробляємо віднімання
@@ -128,18 +118,17 @@ function changeQuantity(event) {
     products[index].quantity--;
     productQuantity.innerHTML = products[index].quantity;
     localStorage.setItem(KEY, JSON.stringify(products));
-    countTotal(products);
   }
 }
 
 // обрахунок суми кошика
-function countTotal(obj) {
-  title.textContent = `Cart (${obj.length})`;
-  const total = obj.reduce((acc, { quantity, price }) => {
-    return (acc += quantity * price);
-  }, 0);
-  totalPrice.textContent = `$${total.toFixed(2)}`;
-}
+// function countTotal(obj) {
+//   title.textContent = `Cart (${obj.length})`;
+//   const total = obj.reduce((acc, { quantity, price }) => {
+//     return (acc += quantity * price);
+//   }, 0);
+//   totalPrice.textContent = `$${total.toFixed(2)}`;
+// }
 
 //email and checkout
 formEmailRet.addEventListener('sumbit', function (evt) {
