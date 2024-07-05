@@ -1,0 +1,1 @@
+{"version":3,"file":"favorite-page-0f38e8bc.js","sources":["../../src/favorite-page.js"],"sourcesContent":["import { handleHeaderScroll } from './js/base-js/scroll';\nimport 'basiclightbox/dist/basicLightbox.min.css'\nhandleHeaderScroll();"],"names":["handleHeaderScroll"],"mappings":"sEAEAA,EAAoB"}

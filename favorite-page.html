@@ -10,11 +10,11 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/Test-task/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/Test-task/assets/vendor-4b9aba64.js">
-    <link rel="modulepreload" crossorigin href="/Test-task/assets/scroll-0cb9cff9.js">
-    <link rel="modulepreload" crossorigin href="/Test-task/assets/cart-page-51634d5f.js">
-    <link rel="stylesheet" href="/Test-task/assets/scroll-eddd9879.css">
+    <script type="module" crossorigin src="/Test-task/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/Test-task/assets/vendor-8057a9e6.js">
+    <link rel="modulepreload" crossorigin href="/Test-task/assets/scroll-ca610e3c.js">
+    <link rel="modulepreload" crossorigin href="/Test-task/assets/favorite-page-0f38e8bc.js">
+    <link rel="stylesheet" href="/Test-task/assets/scroll-d79303e0.css">
     <link rel="stylesheet" href="/Test-task/assets/vendor-b3ce9496.css">
   </head>
 
@@ -25,13 +25,11 @@
     <div class="header-body container">
       <a href="./index.html" class="header-logo">
         <span class="header-logo-svg-span icon-styles">
-          <svg width="16" height="16">
-            <use href="/Test-task/assets/sprite-a8de2b94.svg#icon-logo"></use>
+          <svg width="20" height="20">
+            <use href="/Test-task/assets/sprite-458e423b.svg#icon-icon-button-camper"></use>
           </svg>
         </span>
-        <svg class="header-logo-svg-text" width="118" height="20">
-          <use href="/Test-task/assets/sprite-a8de2b94.svg#icon-food-boutique"></use>
-        </svg>
+        <p>Rental campers</p>
       </a>
       <nav class="header-menu">
         <ul class="header-list">
@@ -41,10 +39,10 @@
             >
           </li>
           <li>
-            <a href="./cart-page.html" class="header-link-basket">
+            <a href="./favorite-page.html" class="header-link-basket">
               <span class="header-link-basket-svg icon-styles">
                 <svg width="14" height="14">
-                  <use href="/Test-task/assets/sprite-a8de2b94.svg#icon-basket"></use>
+                  <use href="/Test-task/assets/sprite-458e423b.svg#icon-icon-favorite"></use>
                 </svg>
               </span>
               <span class="header-basket-card"
@@ -62,72 +60,83 @@
 
       <main>
         <section class="cart-section-container">
-   <div class="container cart-body">
-      <div class="cart">
-         <a href="./cart-page.html" class="header-link-basket">
-            <span class="header-link-basket-svg icon-styles">
-               <svg width="18" height="18">
-                  <use href="/Test-task/assets/sprite-a8de2b94.svg#icon-basket"></use>
-               </svg>
-            </span>
-         </a>
-         <h2 class="products-quantity-title cart-title"></h2>
+  <div class="container cart-body">
+    <div class="cart">
+      <a href="./favorite-page.html" class="header-link-basket">
+        <span class="header-link-basket-svg icon-styles">
+          <svg width="18" height="18">
+            <use href="/Test-task/assets/sprite-458e423b.svg#icon-icon-favorite"></use>
+          </svg>
+        </span>
+      </a>
+      <h2 class="products-quantity-title cart-title"></h2>
+    </div>
+
+    <div class="cart-empty">
+      <h3 class="products-titel">
+        Your favorite list is <span>empty...</span>
+      </h3>
+      <p>
+        Go to the Catalog to select your favorite campers and add them to the
+        favorite list.
+      </p>
+    </div>
+
+    <div class="cart-desktop-wrapper">
+      <div class="del-all-wrapper">
+        <button class="del-all-btn" type="button">Delete all</button>
+        <svg width="16" height="16">
+          <use href="/Test-task/assets/1sprite-02ecb107.svg#icon-closed"></use>
+        </svg>
       </div>
+      <ul class="cart-container"></ul>
 
-      <div class="cart-empty">
-         <img src="/Test-task/assets/basket-x1-b858a5bd.png" alt="Empty basket" srcset="/Test-task/assets/basket-x2-41f25fbc.png 2x" />
-         <h3 class="products-titel">Your basket is <span>empty...</span></h3>
-         <p>
-            Go to the main page to select your favorite products and add them to the
-            cart.
-         </p>
+      <div class="cart-checkout-container">
+        <form class="form-checkout" id="formCheckoutEmail">
+          <input
+            class="inputEmail"
+            type="email"
+            placeholder="Enter your email"
+            autofocus
+            name="user-email-subscribe"
+            id="formCheckoutInput"
+            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+            title="Please enter a valid email address"
+            required
+          />
+
+          <button class="btnCheckout" type="submit">Checkout</button>
+        </form>
       </div>
-
-      <div class="cart-desktop-wrapper">
-         <div class="del-all-wrapper">
-            <button class="del-all-btn" type="button">Delete all</button>
-            <svg width="16" height="16">
-               <use href="/Test-task/assets/sprite-a8de2b94.svg#icon-closed"></use>
-            </svg>
-         </div>
-         <ul class="cart-container"></ul>
-
-         <div class="cart-checkout-container">
-            <h2 class="cart-title">Your order</h2>
-            <div class="cart-total-container">
-               <h2 class="products-total">Total</h2>
-               <p>Sum: <span class="products-total-price cart-title"></span></p>
-            </div>
-
-            <form class="form-checkout" id="formCheckoutEmail">
-               <input class="inputEmail" type="email" placeholder="Enter your email" autofocus name="user-email-subscribe" id="formCheckoutInput" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Please enter a valid email address" required />
-
-               <button class="btnCheckout" type="submit">Checkout</button>
-            </form>
-         </div>
-      </div>
-   </div>
+    </div>
+  </div>
 </section>
-<div id="myModal" class="modal">
-   <div class="modal-content">
-      <span class="close">
-         <svg width="16" height="16">
-            <use href="/Test-task/assets/sprite-a8de2b94.svg#icon-closed"></use>
-         </svg>
-      </span>
 
-      <div>
-         <img class="imgModal" width="140" src="https://ftp.goit.study/img/so-yummy/ingredients/640c2dd963a319ea671e3663.png" />
-         <h2 class="modalH">Order success</h2>
-         <p class="modalMessage">
-            Thank you for shopping at Food Boutique. Your order has been received
-            and is now being freshly prepared just for you! Get ready to indulge in
-            nourishing goodness, delivered right to your doorstep. We're thrilled to
-            be part of your journey to better health and happiness.
-         </p>
-      </div>
-   </div>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">
+      <svg width="16" height="16">
+        <use href="/Test-task/assets/1sprite-02ecb107.svg#icon-closed"></use>
+      </svg>
+    </span>
+
+    <div>
+      <img
+        class="imgModal"
+        width="140"
+        src="https://ftp.goit.study/img/so-yummy/ingredients/640c2dd963a319ea671e3663.png"
+      />
+      <h2 class="modalH">Order success</h2>
+      <p class="modalMessage">
+        Thank you for shopping at Food Boutique. Your order has been received
+        and is now being freshly prepared just for you! Get ready to indulge in
+        nourishing goodness, delivered right to your doorstep. We're thrilled to
+        be part of your journey to better health and happiness.
+      </p>
+    </div>
+  </div>
 </div>
+
 
 
       </main>
@@ -138,32 +147,32 @@
          <a href="./index.html" class="footer-logo">
             <span class="footer-logo-svg-span">
                <svg width="16" height="16">
-                  <use href="/Test-task/assets/sprite-a8de2b94.svg#icon-logo"></use>
+                  <use href="/Test-task/assets/sprite-458e423b.svg#icon-logo"></use>
                </svg>
             </span>
             <svg class="footer-logo-svg-text" width="118" height="20">
-               <use href="/Test-task/assets/sprite-a8de2b94.svg#icon-food-boutique"></use>
+               <use href="/Test-task/assets/sprite-458e423b.svg#icon-food-boutique"></use>
             </svg>
          </a>
          <ul class="footer-social-list">
             <li class="footer-social-item">
                <a href="https://www.facebook.com/" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook icon">
                   <svg width="24" height="24">
-                     <use href="/Test-task/assets/sprite-a8de2b94.svg#icon-facebook"></use>
+                     <use href="/Test-task/assets/sprite-458e423b.svg#icon-facebook"></use>
                   </svg>
                </a>
             </li>
             <li class="footer-social-item">
                <a href="https://www.instagram.com/" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram icon">
                   <svg width="24" height="24">
-                     <use href="/Test-task/assets/sprite-a8de2b94.svg#icon-instagram"></use>
+                     <use href="/Test-task/assets/sprite-458e423b.svg#icon-instagram"></use>
                   </svg>
                </a>
             </li>
             <li class="footer-social-item">
                <a href="https://www.youtube.com/" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Youtube icon">
                   <svg width="24" height="24">
-                     <use href="/Test-task/assets/sprite-a8de2b94.svg#icon-youtube"></use>
+                     <use href="/Test-task/assets/sprite-458e423b.svg#icon-youtube"></use>
                   </svg>
                </a>
             </li>
